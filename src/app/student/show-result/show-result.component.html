@@ -1,0 +1,30 @@
+<div class="container-fluid my-4">
+    <a (click)="goBack()">Back</a>
+</div>
+<div class="container d-flex justify-content-center">
+    <div class="w-50" *ngIf="student.length>0">
+        <h4 class="my-3">Result</h4>
+        <table class="table table-bordered my-4" *ngFor="let st of student">
+            <tr>
+                <th>Roll No.</th>
+                <td>{{st.rollNo}}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{st.name}}</td>
+            </tr>
+            <tr>
+                <th>Date of birth</th>
+                <td>{{st.dob}}</td>
+            </tr>
+            <tr>
+                <th>Score</th>
+                <td>{{st.score}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="no-student w-50" *ngIf="student.length<=0">
+        <h1 class="display-5 text-center my-4">No Result Found</h1>
+        <div class="d-flex justify-content-center mt-5"><button (click)="goBack()" class="btn btn-warning">Search Another Result</button></div>
+    </div>
+</div>

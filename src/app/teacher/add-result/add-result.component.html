@@ -1,0 +1,56 @@
+<div class="container-fluid my-4">
+  <a (click)="goBack()">Back</a>
+</div>
+<div class="container w-50">
+  <form [formGroup]="addResultForm" (ngSubmit)="onSubmit()">
+    <h4 class="my-3">Add New Result</h4>
+    <span *ngIf="errorMessage" class="text-danger">{{errorMessage}}</span>
+    <div class="form-group my-2">
+      <label for="rollNo">Roll No.</label>
+      <input
+        type="text"
+        id="rollNo"
+        name="rollNo"
+        class="form-control"
+        formControlName="rollNo"
+      />
+      <span *ngIf="fields.rollNo.invalid && fields.rollNo.touched" class="text-danger">Please enter roll no.</span>
+    </div>
+    <div class="form-group my-2">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="form-control"
+        formControlName="name"
+      />
+      <span *ngIf="fields.name.invalid && fields.name.touched" class="text-danger">Please enter name</span>
+    </div>
+    <div class="form-group my-2">
+      <label for="dob">Date Of Birth</label>
+      <input
+        type="date"
+        id="dob"
+        name="dob"
+        class="form-control"
+        formControlName="dob"
+      />
+      <span *ngIf="fields.dob.invalid && fields.dob.touched" class="text-danger">Please select date of birth</span>
+    </div>
+    <div class="form-group my-2">
+      <label for="score">Score</label>
+      <input
+        type="text"
+        id="score"
+        name="score"
+        class="form-control"
+        formControlName="score"
+      /><span *ngIf="fields.score.invalid && fields.score.touched" class="text-danger">Please enter score</span>
+    </div>
+    <div class="my-3">
+      <button class="btn btn-primary">Submit</button>&nbsp;
+      <button class="btn btn-secondary">Clear</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "role": "teacher",
+      "email": "teacher@gmail.com",
+      "password": "teacher"
+    },
+    {
+      "id": 2,
+      "role": "student",
+      "email": "student@gmail.com",
+      "password": "student"
+    }
+  ],
+  "students": [
+    {
+      "dob": "2000-08-04",
+      "rollNo": "65",
+      "score": "98",
+      "name": "Satish",
+      "id": 9
+    },
+    {
+      "dob": "2022-07-22",
+      "rollNo": "12",
+      "score": "88",
+      "name": "Priya",
+      "id": 10
+    }
+  ]
+}

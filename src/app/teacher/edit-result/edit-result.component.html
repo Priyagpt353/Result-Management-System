@@ -1,0 +1,58 @@
+<div class="container-fluid my-4">
+    <a (click)="goBack()">Back</a>
+  </div>
+  <div class="container w-50">
+    <form [formGroup]="updateResultForm" (ngSubmit)="onSubmit()">
+      <h4 class="my-3">Update Result</h4>
+      <div class="form-group my-2">
+        <label for="rollNo">Roll No.</label>
+        <input
+          type="text"
+          id="rollNo"
+          name="rollNo"
+          class="form-control"
+          formControlName="rollNo"
+          [value]="student.rollNo"
+          
+        />
+      </div>
+      <div class="form-group my-2">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="form-control"
+          formControlName="name"
+          [value]="student.name"
+        />
+      </div>
+      <div class="form-group my-2">
+        <label for="dob">Date Of Birth</label>
+        <input
+          type="date"
+          id="dob"
+          name="dob"
+          class="form-control"
+          formControlName="dob"
+          [value]="student.dob"
+        />
+      </div>
+      <div class="form-group my-2">
+        <label for="score">Score</label>
+        <input
+          type="text"
+          id="score"
+          name="score"
+          class="form-control"
+          formControlName="score"
+          [value]="student.score"
+        />
+      </div>
+      <div class="my-3">
+        <button class="btn btn-primary">Update</button>&nbsp;
+        <button class="btn btn-secondary">Clear</button>
+      </div>
+    </form>
+  </div>
+  

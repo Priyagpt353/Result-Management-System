@@ -1,0 +1,6 @@
+<div class="header d-flex justify-content-between">
+    <div></div>
+    <h2>Result Management System</h2>
+    <button *ngIf="isLoggedIn" class="btn btn-secondary" (click)="onLogout()">Logout</button>
+    <div *ngIf="!isLoggedIn"></div>
+</div>

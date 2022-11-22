@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center mt-5">
+    <div class="login-box mt-4 w-25">
+        <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+        <h2 class="text-center display-5 my-3">Login</h2>
+        <span *ngIf="errorMessage" class="text-danger">{{errorMessage}}</span>
+        <div class="form-group my-2">
+            <label for="email">Enter Email</label>
+            <input type="email" id="email" class="form-control" formControlName="email">
+            <span *ngIf="fields.email.invalid && fields.email.touched" class="text-danger">Please enter email</span>
+        </div>
+        <div class="form-group my-2">
+            <label for="password">Enter Password</label>
+            <input type="text" id="password" class="form-control" formControlName="password">
+            <span *ngIf="fields.email.invalid && fields.email.touched" class="text-danger">Please enter password</span>
+        </div>
+        <div class="my-2">
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+    </form>
+    </div>
+</div>
